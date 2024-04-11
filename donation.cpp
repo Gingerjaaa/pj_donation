@@ -8,7 +8,7 @@ private:
 
 public:
     donation();
-    void adddonation(Donor& donor);
+    void adddonation(const Donor& donor);
     double total();
     void display();
     ~donation();
@@ -18,7 +18,7 @@ donation::donation(){
     head = NULL;
 }
 
-void donation::adddonation(Donor& donor){
+void donation::adddonation(const Donor& donor){
     Donor* newDonor = new Donor(donor.name, donor.amount);
     if (head == NULL){
         head = newDonor;
